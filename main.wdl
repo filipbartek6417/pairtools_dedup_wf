@@ -17,8 +17,8 @@ task pairtools_task {
 
     runtime {
         cpu: 32
-        memory: "200G"
-        disks: "local-disk 20000 SSD"
+        memory: "100G"
+        disks: "local-disk 1000 SSD"
         docker: container
     }
 }
