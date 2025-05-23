@@ -7,7 +7,7 @@ task pairtools_task {
     }
 
     command <<<
-        pairtools dedup --nproc-in 32 --nproc-out 32 --mark-dups --output-stats stats.txt --output dedup.pairsam {sorted}
+        pairtools dedup --nproc-in 32 --nproc-out 32 --mark-dups --output-stats stats.txt --output dedup.pairsam ~{sorted}
     >>>
 
     output {
