@@ -17,15 +17,15 @@ task pairtools_task {
 
     runtime {
         cpu: 32
-        memory: "100G"
-        disks: "local-disk 1000 SSD"
+        memory: "150G"
+        disks: "local-disk 10000 SSD"
         docker: container
     }
 }
 
 workflow pairtools_wf {
   input {
-    File sorted = "gs://fc-c3eed389-0be2-4bbc-8c32-1a40b8696969/submissions/289e2f2d-9a58-4504-a692-c62e8c642f44/pairtools_wf/05d87378-5a10-491f-8a79-9c8951115163/call-pairtools_task/sorted.pairsam"
+    File sorted = "gs://fc-c3eed389-0be2-4bbc-8c32-1a40b8696969/submissions/625e9f72-c6fe-4435-a731-771f181ce451/pairtools_wf/2d58b427-0a6e-4eee-972b-9f722edcd850/call-pairtools_task/sorted.pairsam"
     String container = "quay.io/biocontainers/pairtools:1.1.3--py311h534e829_0"
   }
 
